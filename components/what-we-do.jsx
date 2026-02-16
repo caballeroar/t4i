@@ -1,4 +1,10 @@
-import { Monitor, UsersRound, Leaf, HeartHandshake, Compass } from "lucide-react"
+import {
+  Monitor,
+  UsersRound,
+  Leaf,
+  HeartHandshake,
+  Compass,
+} from "lucide-react";
 
 const activities = [
   {
@@ -21,24 +27,26 @@ const activities = [
     icon: HeartHandshake,
     text: "Samenwerking met scholen en wijkorganisaties",
   },
-]
+];
 
 export function WhatWeDo() {
   return (
-    <section id="wat-we-doen" className="py-20 md:py-28">
+    <section id="wat-we-doen" className="py-20 md:py-28 bg-white">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-14 lg:grid-cols-2 lg:items-start">
           {/* Left column */}
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#00BBF9]">
               Wat we doen
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
-              Leertrajecten waar technologie, toekomst en duurzaamheid samenkomen
+              Leertrajecten waar technologie, toekomst en duurzaamheid
+              samenkomen
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Wij organiseren leertrajecten waarin technologie, toekomst en duurzaamheid
-              samenkomen. Alles is begrijpelijk, toepasbaar en gericht op de praktijk.
+              Wij organiseren leertrajecten waarin technologie, toekomst en
+              duurzaamheid samenkomen. Alles is begrijpelijk, toepasbaar en
+              gericht op de praktijk.
             </p>
           </div>
 
@@ -49,15 +57,17 @@ export function WhatWeDo() {
                 key={item.text}
                 className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 shadow-sm"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#00BBF9]/10 text-[#00BBF9]">
                   <item.icon className="h-5 w-5" />
                 </div>
-                <p className="text-sm leading-relaxed text-card-foreground">{item.text}</p>
+                <p className="text-sm leading-relaxed text-card-foreground">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

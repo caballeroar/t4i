@@ -17,14 +17,14 @@ const steps = [
     description:
       "We denken in lange termijn impact, niet in losse activiteiten. Zo zorgen we dat kennis blijft hangen en wordt doorgegeven.",
   },
-]
+];
 
 export function HowWeWork() {
   return (
-    <section className="bg-secondary py-20 md:py-28">
+    <section className="bg-secondary py-20 md:py-28 bg-[#FFF200]/10">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#F15BB5]">
             Hoe we werken
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-secondary-foreground md:text-4xl text-balance">
@@ -44,7 +44,7 @@ export function HowWeWork() {
               )}
 
               <div className="relative mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-card shadow-sm border border-border">
-                <span className="font-heading text-2xl font-bold text-primary">
+                <span className="font-heading text-2xl font-bold text-[#F15BB5]">
                   {step.number}
                 </span>
               </div>
@@ -59,5 +59,5 @@ export function HowWeWork() {
         </div>
       </div>
     </section>
-  )
+  );
 }

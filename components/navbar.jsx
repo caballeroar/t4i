@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Over ons", href: "#over-ons" },
@@ -9,15 +9,18 @@ const navLinks = [
   { label: "Wat we doen", href: "#wat-we-doen" },
   { label: "Impact", href: "#impact" },
   { label: "Samenwerken", href: "#samenwerken" },
-]
+];
 
 export function Navbar() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="font-heading text-xl font-bold tracking-tight text-foreground">
+        <a
+          href="#"
+          className="font-heading text-xl font-bold tracking-tight text-foreground"
+        >
           Tech for Impact
         </a>
 
@@ -37,7 +40,7 @@ export function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-block"
+          className="hidden rounded-lg bg-[#FFF200] px-5 py-2.5 text-sm font-medium text-foreground transition-opacity hover:opacity-90 md:inline-block"
         >
           Contact
         </a>
@@ -71,7 +74,7 @@ export function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                className="inline-block rounded-lg bg-[#FFF200] px-5 py-2.5 text-sm font-medium text-foreground transition-opacity hover:opacity-90"
               >
                 Contact
               </a>
@@ -80,5 +83,5 @@ export function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }

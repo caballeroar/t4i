@@ -164,7 +164,7 @@ export function ContactForm() {
             type="text"
             required
             placeholder="Je volledige naam"
-            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors"
+            className="w-full rounded-lg border border-border bg-[#FFF200]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
           />
         </div>
         <div className="flex-1">
@@ -180,7 +180,7 @@ export function ContactForm() {
             type="email"
             required
             placeholder="naam@voorbeeld.nl"
-            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors"
+            className="w-full rounded-lg border border-border bg-[#FFF200]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
           />
         </div>
       </div>
@@ -197,7 +197,7 @@ export function ContactForm() {
           name="organization"
           type="text"
           placeholder="School, wijkorganisatie, gemeente..."
-          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors"
+          className="w-full rounded-lg border border-border bg-[#FFF200]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
         />
       </div>
 
@@ -214,7 +214,7 @@ export function ContactForm() {
           required
           rows={5}
           placeholder="Vertel ons hoe we kunnen samenwerken..."
-          className="w-full resize-none rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors"
+          className="w-full resize-none rounded-lg border border-border bg-[#FFF200]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
         />
       </div>
 
@@ -231,7 +231,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#FFF200] px-8 py-3.5 text-base font-medium text-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
       >
         {status === "submitting"
           ? "Bezig met versturen..."
