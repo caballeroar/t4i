@@ -13,9 +13,31 @@ function isNetlifySubmissionResponse(response) {
   }
 
   const cameFromNetlify = Boolean(response.headers.get("x-nf-request-id"));
-  return (
-    cameFromNetlify && (response.status === 400 || response.status === 404)
-  );
+  const isKnownNetlifyStatus =
+    response.status === 400 || response.status === 404;
+  if (cameFromNetlify && isKnownNetlifyStatus) {
+    return true;
+  }
+
+  if (
+    typeof window !== "undefined" &&
+    response.type === "basic" &&
+    isKnownNetlifyStatus
+  ) {
+    try {
+      const responseOrigin = new URL(response.url).origin;
+      if (responseOrigin === window.location.origin) {
+        return true;
+      }
+    } catch (error) {
+      console.warn(
+        "[ContactForm] Unable to parse response URL for Netlify fallback.",
+        error,
+      );
+    }
+  }
+
+  return false;
 }
 
 function formDataToUrlEncoded(formData) {
@@ -37,7 +59,15 @@ export function ContactForm() {
     const formData = new FormData(e.currentTarget);
     const name = (formData.get("name") || "").toString().trim();
     const email = (formData.get("email") || "").toString().trim();
+    const organization = (formData.get("organization") || "").toString().trim();
     const message = (formData.get("message") || "").toString().trim();
+
+    console.log("[ContactForm] Submitting", {
+      name,
+      email,
+      organization,
+      messageLength: message.length,
+    });
 
     if (!name) {
       setErrorMessage("Vul je naam in.");
@@ -72,6 +102,16 @@ export function ContactForm() {
         body: formDataToUrlEncoded(formData),
       });
 
+      const netlifyRequestId = response.headers.get("x-nf-request-id");
+      console.log("[ContactForm] Response received", {
+        status: response.status,
+        ok: response.ok,
+        redirected: response.redirected,
+        type: response.type,
+        netlifyRequestId,
+        url: response.url,
+      });
+
       if (!isNetlifySubmissionResponse(response)) {
         throw new Error("Kon het formulier niet versturen.");
       }
@@ -87,7 +127,7 @@ export function ContactForm() {
       e.currentTarget.reset();
       setStatus("success");
     } catch (error) {
-      console.error(error);
+      console.error("[ContactForm] Submission failed", error);
       setErrorMessage(
         "Er ging iets mis bij het versturen. Probeer het opnieuw.",
       );
