@@ -56,7 +56,8 @@ export function ContactForm() {
     e.preventDefault();
     setErrorMessage("");
 
-    const formData = new FormData(e.currentTarget);
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
     const name = (formData.get("name") || "").toString().trim();
     const email = (formData.get("email") || "").toString().trim();
     const organization = (formData.get("organization") || "").toString().trim();
@@ -124,7 +125,7 @@ export function ContactForm() {
         );
       }
 
-      e.currentTarget.reset();
+      formElement.reset();
       setStatus("success");
     } catch (error) {
       console.error("[ContactForm] Submission failed", error);
