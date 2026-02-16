@@ -1,64 +1,79 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Send, CheckCircle2, AlertCircle } from "lucide-react"
+import { useState } from "react";
+import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 
-const EMAIL_ADDRESS = "info@techforimpact.nl"
+const EMAIL_ADDRESS = "amelrc@yahoo.com";
+const FORM_NAME = "contact-form";
+
+function formDataToUrlEncoded(formData) {
+  const params = new URLSearchParams();
+  formData.forEach((value, key) => {
+    params.append(key, typeof value === "string" ? value : "");
+  });
+  return params.toString();
+}
 
 export function ContactForm() {
-  const [status, setStatus] = useState("idle")
-  const [errorMessage, setErrorMessage] = useState("")
+  const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefault()
-    setErrorMessage("")
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setErrorMessage("");
 
-    const formData = new FormData(e.currentTarget)
-    const name = (formData.get("name") || "").toString().trim()
-    const email = (formData.get("email") || "").toString().trim()
-    const organization = (formData.get("organization") || "").toString().trim()
-    const message = (formData.get("message") || "").toString().trim()
+    const formData = new FormData(e.currentTarget);
+    const name = (formData.get("name") || "").toString().trim();
+    const email = (formData.get("email") || "").toString().trim();
+    const organization = (formData.get("organization") || "").toString().trim();
+    const message = (formData.get("message") || "").toString().trim();
 
     if (!name) {
-      setErrorMessage("Vul je naam in.")
-      setStatus("error")
-      return
+      setErrorMessage("Vul je naam in.");
+      setStatus("error");
+      return;
     }
     if (!email) {
-      setErrorMessage("Vul je e-mailadres in.")
-      setStatus("error")
-      return
+      setErrorMessage("Vul je e-mailadres in.");
+      setStatus("error");
+      return;
     }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setErrorMessage("Voer een geldig e-mailadres in.")
-      setStatus("error")
-      return
+      setErrorMessage("Voer een geldig e-mailadres in.");
+      setStatus("error");
+      return;
     }
     if (!message) {
-      setErrorMessage("Vul een bericht in.")
-      setStatus("error")
-      return
+      setErrorMessage("Vul een bericht in.");
+      setStatus("error");
+      return;
     }
 
-    const subject = encodeURIComponent(
-      `Contactformulier: bericht van ${name}${organization ? ` (${organization})` : ""}`
-    )
-    const body = encodeURIComponent(
-      [
-        `Naam: ${name}`,
-        `E-mail: ${email}`,
-        organization ? `Organisatie: ${organization}` : null,
-        ``,
-        `Bericht:`,
-        message,
-      ]
-        .filter(Boolean)
-        .join("\n")
-    )
+    setStatus("submitting");
 
-    window.location.href = `mailto:${EMAIL_ADDRESS}?subject=${subject}&body=${body}`
-    setStatus("success")
+    formData.append("form-name", FORM_NAME);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formDataToUrlEncoded(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Kon het formulier niet versturen.");
+      }
+
+      e.currentTarget.reset();
+      setStatus("success");
+    } catch (error) {
+      console.error(error);
+      setErrorMessage(
+        "Er ging iets mis bij het versturen. Probeer het opnieuw.",
+      );
+      setStatus("error");
+    }
   }
 
   if (status === "success") {
@@ -66,17 +81,18 @@ export function ContactForm() {
       <div className="mx-auto max-w-lg rounded-xl border border-primary/20 bg-primary/10 p-8 text-center">
         <CheckCircle2 className="mx-auto h-12 w-12 text-primary" />
         <h3 className="mt-4 font-heading text-xl font-bold text-foreground">
-          Je e-mailprogramma is geopend!
+          Bedankt voor je bericht!
         </h3>
         <p className="mt-2 text-muted-foreground">
-          Klik op versturen in je e-mailprogramma om het bericht te verzenden. Heb je geen
-          e-mailprogramma? Stuur dan een mail naar{" "}
+          We hebben je inzending ontvangen en nemen zo snel mogelijk contact met
+          je op via{" "}
           <a
             href={`mailto:${EMAIL_ADDRESS}`}
             className="font-medium text-primary underline underline-offset-2 hover:text-primary/80"
           >
             {EMAIL_ADDRESS}
           </a>
+          .
         </p>
         <button
           onClick={() => setStatus("idle")}
@@ -85,15 +101,26 @@ export function ContactForm() {
           Formulier opnieuw invullen
         </button>
       </div>
-    )
+    );
   }
 
   return (
     <form
       onSubmit={handleSubmit}
       className="mx-auto max-w-lg space-y-5"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      method="POST"
+      name={FORM_NAME}
       noValidate
     >
+      <input type="hidden" name="form-name" value={FORM_NAME} />
+      <p className="hidden" aria-hidden="true">
+        <label>
+          Laat dit veld leeg
+          <input name="bot-field" type="text" />
+        </label>
+      </p>
       <div className="flex flex-col gap-5 sm:flex-row">
         <div className="flex-1">
           <label
@@ -174,13 +201,16 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90"
+        disabled={status === "submitting"}
+        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-base font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
       >
-        Verstuur bericht
+        {status === "submitting"
+          ? "Bezig met versturen..."
+          : "Verstuur bericht"}
         <Send className="h-4 w-4" />
       </button>
 
-      <p className="text-center text-xs text-muted-foreground">
+      {/* <p className="text-center text-xs text-muted-foreground">
         Of mail direct naar{" "}
         <a
           href={`mailto:${EMAIL_ADDRESS}`}
@@ -188,7 +218,7 @@ export function ContactForm() {
         >
           {EMAIL_ADDRESS}
         </a>
-      </p>
+      </p> */}
     </form>
-  )
+  );
 }
