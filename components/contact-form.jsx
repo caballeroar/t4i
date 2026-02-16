@@ -29,12 +29,7 @@ function isNetlifySubmissionResponse(response) {
       if (responseOrigin === window.location.origin) {
         return true;
       }
-    } catch (error) {
-      console.warn(
-        "[ContactForm] Unable to parse response URL for Netlify fallback.",
-        error,
-      );
-    }
+    } catch {}
   }
 
   return false;
@@ -62,13 +57,6 @@ export function ContactForm() {
     const email = (formData.get("email") || "").toString().trim();
     const organization = (formData.get("organization") || "").toString().trim();
     const message = (formData.get("message") || "").toString().trim();
-
-    console.log("[ContactForm] Submitting", {
-      name,
-      email,
-      organization,
-      messageLength: message.length,
-    });
 
     if (!name) {
       setErrorMessage("Vul je naam in.");
@@ -103,32 +91,13 @@ export function ContactForm() {
         body: formDataToUrlEncoded(formData),
       });
 
-      const netlifyRequestId = response.headers.get("x-nf-request-id");
-      console.log("[ContactForm] Response received", {
-        status: response.status,
-        ok: response.ok,
-        redirected: response.redirected,
-        type: response.type,
-        netlifyRequestId,
-        url: response.url,
-      });
-
       if (!isNetlifySubmissionResponse(response)) {
         throw new Error("Kon het formulier niet versturen.");
-      }
-
-      if (!response.ok) {
-        console.warn(
-          "Netlify Forms returned",
-          response.status,
-          "but captured the submission.",
-        );
       }
 
       formElement.reset();
       setStatus("success");
     } catch (error) {
-      console.error("[ContactForm] Submission failed", error);
       setErrorMessage(
         "Er ging iets mis bij het versturen. Probeer het opnieuw.",
       );
