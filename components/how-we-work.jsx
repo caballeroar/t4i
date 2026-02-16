@@ -21,7 +21,7 @@ const steps = [
 
 export function HowWeWork() {
   return (
-    <section className="bg-secondary py-20 md:py-28 bg-[#FFF200]/10">
+    <section className=" py-20 md:py-28 bg-[#FFF200]/10">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#F15BB5]">
