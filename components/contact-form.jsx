@@ -6,6 +6,18 @@ import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 const EMAIL_ADDRESS = "amelrc@yahoo.com";
 const FORM_NAME = "contact-form";
 
+// Netlify sometimes responds with 400/404 while still storing the submission; detect that case.
+function isNetlifySubmissionResponse(response) {
+  if (response.ok) {
+    return true;
+  }
+
+  const cameFromNetlify = Boolean(response.headers.get("x-nf-request-id"));
+  return (
+    cameFromNetlify && (response.status === 400 || response.status === 404)
+  );
+}
+
 function formDataToUrlEncoded(formData) {
   const params = new URLSearchParams();
   formData.forEach((value, key) => {
@@ -25,7 +37,6 @@ export function ContactForm() {
     const formData = new FormData(e.currentTarget);
     const name = (formData.get("name") || "").toString().trim();
     const email = (formData.get("email") || "").toString().trim();
-    const organization = (formData.get("organization") || "").toString().trim();
     const message = (formData.get("message") || "").toString().trim();
 
     if (!name) {
@@ -61,8 +72,16 @@ export function ContactForm() {
         body: formDataToUrlEncoded(formData),
       });
 
-      if (!response.ok) {
+      if (!isNetlifySubmissionResponse(response)) {
         throw new Error("Kon het formulier niet versturen.");
+      }
+
+      if (!response.ok) {
+        console.warn(
+          "Netlify Forms returned",
+          response.status,
+          "but captured the submission.",
+        );
       }
 
       e.currentTarget.reset();
