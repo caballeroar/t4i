@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -19,9 +20,20 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#"
-          className="font-heading text-xl font-bold tracking-tight text-foreground"
+          className="flex items-center gap-3 text-foreground "
+          aria-label="Tech for Impact home"
         >
-          Tech for Impact
+          <Image
+            src="/logo.png"
+            alt="Tech for Impact logo"
+            width={48}
+            height={48}
+            priority
+            className="w-32 h-10 rounded-md object-contain"
+          />
+          {/* <span className="font-heading text-xl font-bold tracking-tight">
+            Tech for Impact
+          </span> */}
         </a>
 
         {/* Desktop nav */}
