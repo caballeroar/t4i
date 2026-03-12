@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
+        sans: ['"PP Mori"', 'system-ui', 'sans-serif'],
+        heading: ['"Monument Extended"', '"PP Mori"', 'system-ui', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

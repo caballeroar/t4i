@@ -1,12 +1,4 @@
-import { Inter, Space_Grotesk } from "next/font/google";
-
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-});
 
 export const metadata = {
   title: "Tech for Impact — Technologie voor een eerlijke en duurzame toekomst",
@@ -23,7 +15,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="nl" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="nl">
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Place the font files in public/fonts/pp-mori and public/fonts/monument-extended */
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/pp-mori/PPMori-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/pp-mori/PPMori-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  src: url("/fonts/monument-extended/MonumentExtended-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  src: url("/fonts/monument-extended/MonumentExtended-Ultrabold.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
