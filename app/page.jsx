@@ -16,13 +16,13 @@ export default function Page() {
       <Navbar />
       <main className="bg-[#1FC7FF]">
         <Hero />
-        <About />
-        <ForWhom />
         <WhatWeDo />
+        <WhyLaak />
+        <ForWhom />
         <HowWeWork />
         <Impact />
         <Partners />
-        <WhyLaak />
+        <About />
         <CTA />
       </main>
       <Footer />
