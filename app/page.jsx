@@ -8,16 +8,26 @@ import { Partners } from "@/components/partners";
 import { WhyLaak } from "@/components/why-laak";
 import { CTA } from "@/components/cta";
 import { Footer } from "@/components/footer";
+import Image from "next/image";
 
 export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#1FC7FF]">
+      <main className="  bg-[#1FC7FF]">
         <Hero />
         <WhatWeDo />
         <WhyLaak />
-        {/* <ForWhom /> */}
+        <div
+          className="absolute w-full h-full left-[-5%]"
+          style={{
+            backgroundImage: 'url("/assets/Star_pink.svg")',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+          }}
+        ></div>
+        <ForWhom />
+
         <Partners />
         <Impact />
         <About />

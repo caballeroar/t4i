@@ -16,7 +16,7 @@ export function Pill({
   return (
     <span
       className={cn(
-        " items-center text-center gap-3 rounded-full  px-12 py-6 text-xl font-semibold text-balance md:text-2xl md:px-16 md:py-8",
+        " items-center text-center gap-3 max-w-[450px] rounded-full  px-12 py-6 text-xl font-semibold text-balance md:text-2xl md:px-16 md:py-8",
         className,
       )}
       style={{
