@@ -120,13 +120,6 @@ export function WhatWeDo() {
           snapshot
         </p>
 
-        {/* <Image
-          src="/assets/circled.svg"
-          alt="Underline"
-          fill
-          className="absolute inset-0 scale-150 transform -rotate-3"
-        /> */}
-
         <div
           className=" w-full max-w-[1224px] flex justify-center sm:h-[360px] sm:items-end lg:items-center"
           style={{
