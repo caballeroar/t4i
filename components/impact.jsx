@@ -10,81 +10,62 @@ import Image from "next/image";
 const cards = [
   {
     icon: TrendingUp,
+    title: "Tech for Impact contributes to the following impact goals:",
     text: "Meer digitale en toekomstgerichte vaardigheden bij jongeren",
   },
   {
     icon: Brain,
+    title: "Tech for Impact contributes to the following impact goals:",
     text: "Meer bewustzijn over duurzaamheid en maatschappelijke vraagstukken",
   },
   {
     icon: Sparkles,
+    title: "Tech for Impact contributes to the following impact goals:",
     text: "Meer zelfvertrouwen en perspectief op werk en opleiding",
   },
   {
     icon: Handshake,
+    title: "Tech for Impact contributes to the following impact goals:",
     text: "Sterkere verbinding tussen jongeren, wijk en stad",
-  },
-  {
-    icon: Building2,
-    text: "Duurzame investering in talent en lokale ontwikkeling",
-  },
-];
-const pills = [
-  {
-    text: "Young professional working in technology, design or sustainability",
-  },
-  {
-    text: "Expats who wants to connect with local initiatives",
-  },
-  {
-    text: "Someone curious about technology for social good",
-  },
-  {
-    text: "Someone with a migration background interested in innovation",
   },
 ];
 
 export function Impact() {
   return (
-    <section id="samenwerken" className="bg-white ">
+    <section
+      id="samenwerken"
+      className="relative overflow-hidden py-20 md:py-32 lg:py-40 xl:py-[18%]"
+      style={{
+        backgroundImage: "url(/assets/Ellipse_yellow.svg)",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="mx-auto max-w-6xl px-6">
-        <div className="flex justify-end rotate-2">
+        <div className="flex justify-center rotate-2">
           <Image
             className="transform -rotate-6"
-            src="/assets/Scribble.svg"
+            src="/assets/Face.svg"
             alt="Programme"
             width={72}
             height={72}
           />
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-base uppercase  md:text-5xl ">
-            The Programme
+          <h2 className="mt-3 font-heading text-xl font-bold tracking-base uppercase sm:text-3xl md:text-4xl lg:text-5xl">
+            Impact
           </h2>
-          <Image
-            src="/assets/Scribble-1.svg"
-            alt="Programme"
-            width={72}
-            height={72}
-          />
         </div>
         <div>
-          <p>
-            ;Tech for Impact brings together people and organisations who
-            believe that technology and collaboration can help address real
-            social and environmental challenges in the city.
+          <p className="text-lg md:text-xl">
+            Tech for Impact contributes to several of the United Nations
+            Sustainable Development Goals, translating global ambitions into
+            local action in The Hague. In particular we contribute to
           </p>
-          <Image
-            className="transform -rotate-6"
-            src="/assets/Scribble.svg"
-            alt="Programme"
-            width={72}
-            height={72}
-          />
-          <p>
-            ;The programme is built on collaboration and reflects the spirit of
-            United Nations Sustainable Development Goal 17: Partnerships for the
-            Goals, which recognises that meaningful change happens when
-            organisations, communities and individuals work together.
-          </p>
+          <div className="mx-auto flex flex-col w-5/6 gap-2 flex-wrap sm:flex-row justify-center items-center xl:w-4/6">
+            {card.map((item) => (
+              <div></div>
+            ))}
+          </div>
         </div>
         <div>
           <p>

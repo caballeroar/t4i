@@ -5,7 +5,7 @@ export function WhyLaak() {
   return (
     <section className="py-20 md:py-28 ">
       <div className="relative flex w-5/6 flex-col gap-6 mx-auto md:flex-row md:gap-0 md:-space-x-6">
-        <div className="relative w-full min-h-[260px] overflow-hidden rounded-3xl transform -rotate-2 ">
+        <div className="relative w-full min-h-[260px] overflow-hidden aspect-video rounded-3xl transform -rotate-2 ">
           <Image
             src="/assets/laakimage.jpg"
             alt="Laak Neigbourhood"
@@ -13,7 +13,7 @@ export function WhyLaak() {
             className="object-cover rounded-3xl"
           />
         </div>
-        <div className="relative w-full min-h-[260px] overflow-hidden rounded-3xl transform rotate-2 ">
+        <div className="relative w-full min-h-[260px] overflow-hidden aspect-video rounded-3xl transform rotate-2 ">
           <Image
             src="/assets/laakhood.jpg"
             alt="Programme"

@@ -31,10 +31,7 @@ const audiences = [
 
 export function ForWhom() {
   return (
-    <section
-      id="voor-wie"
-      className="relative overflow-hidden py-20 md:py-28 mt-[30%]"
-    >
+    <section id="voor-wie" className="relative overflow-hidden  mt-[30%]">
       <div className="relative flex flex-col w-5/6 mx-auto  gap-8   items-start text-left xl:w-4/6">
         <div className="flex w-full items-center gap-4">
           <h2 className="font-heading text-3xl uppercase font-bold md:text-5xl">
@@ -59,7 +56,7 @@ export function ForWhom() {
           src="/assets/participants.webp"
           alt="Participants working together"
           fill
-          className="object-cover rounded-3xl"
+          className="object-contain rounded-3xl"
         />
       </div>
 
