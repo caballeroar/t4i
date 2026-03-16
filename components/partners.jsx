@@ -28,7 +28,7 @@ export function Partners() {
   return (
     <section
       id="samenwerken"
-      className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:py-[18%]"
+      className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:pt-[18%] xl:pb-[26%]"
       style={{
         backgroundImage: "url(/assets/Ellipse_white.svg)",
         backgroundPosition: "center center",
@@ -94,29 +94,29 @@ export function Partners() {
             ))}
           </div>
         </div>
+      </div>
 
-        <div className="flex flex-col items-center gap-6 text-center">
-          <Image
-            src="/assets/star_pink.svg"
-            alt="Star"
-            width={60}
-            height={100}
-            className="object-contain aspect-square"
-          />
-          <div className="space-y-3">
-            <h5 className="text-2xl font-semibold">
-              Interested in collaborating with Tech for Impact?
-            </h5>
-            <p className="text-base text-slate-600">
-              We welcome people, organisations, and initiatives that want to
-              share challenges, mentor teams, or support the development of new
-              solutions.
-            </p>
-          </div>
-          <button className="mt-2 rounded-xl bg-[#FFF200] px-10 py-5 font-semibold text-lg transition hover:-translate-y-0.5">
-            Get In Touch
-          </button>
+      <div className="flex flex-col w-4/6 mx-auto justify-center my-40 gap-6 text-center lg:flex-row lg:gap-4">
+        <Image
+          src="/assets/star_pink.svg"
+          alt="Star"
+          width={60}
+          height={100}
+          className="object-contain aspect-square"
+        />
+        <div className="space-y-3 lg:w-3/6">
+          <h5 className="text-xl lg:text-start font-semibold">
+            Interested in collaborating with Tech for Impact?
+          </h5>
+          <p className="text-base lg:text-start">
+            We welcome people, organisations, and initiatives that want to share
+            challenges, mentor teams, or support the development of new
+            solutions.
+          </p>
         </div>
+        <button className="rounded-xl bg-[#FFF200] self-center px-10 py-5 font-semibold text-lg transition hover:-translate-y-0.5">
+          Get In Touch
+        </button>
       </div>
     </section>
   );
