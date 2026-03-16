@@ -113,7 +113,7 @@ export function Partners() {
               solutions.
             </p>
           </div>
-          <button className="mt-2 rounded-sm bg-[#FFF200] px-10 py-5 font-semibold text-lg transition hover:-translate-y-0.5">
+          <button className="mt-2 rounded-xl bg-[#FFF200] px-10 py-5 font-semibold text-lg transition hover:-translate-y-0.5">
             Get In Touch
           </button>
         </div>

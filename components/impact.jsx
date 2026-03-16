@@ -116,7 +116,7 @@ export function Impact() {
               />
             ))}
           </div>
-        <button className="mt-2 rounded-sm bg-[#F15BB5] px-10 py-5 font-semibold text-lg transition hover:-translate-y-0.5">
+        <button className="mt-2 rounded-xl bg-[#F15BB5] px-10 py-5 font-semibold text-lg transition hover:-translate-y-0.5">
           Get In Touch
         </button>
         </div>
