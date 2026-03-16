@@ -1,32 +1,45 @@
-import {
-  TrendingUp,
-  Brain,
-  Handshake,
-  Sparkles,
-  Building2,
-} from "lucide-react";
 import Image from "next/image";
+import { Pill } from "./ui/pill";
 
 const cards = [
   {
-    icon: TrendingUp,
-    title: "Tech for Impact contributes to the following impact goals:",
-    text: "Meer digitale en toekomstgerichte vaardigheden bij jongeren",
+    src: "/assets/9.svg",
+    title: "Industry, Innovation and Infrastructure",
+    text: "Exploring how technology and innovation can support communities and local initiatives.",
   },
   {
-    icon: Brain,
-    title: "Tech for Impact contributes to the following impact goals:",
-    text: "Meer bewustzijn over duurzaamheid en maatschappelijke vraagstukken",
+    src: "/assets/11.svg",
+    title: "Sustainable Cities and Communities",
+    text: "Supporting stronger, more liveable neighbourhoods.",
   },
   {
-    icon: Sparkles,
-    title: "Tech for Impact contributes to the following impact goals:",
-    text: "Meer zelfvertrouwen en perspectief op werk en opleiding",
+    src: "/assets/13.svg",
+    title: "Climate Action",
+    text: "Exploring ideas related to sustainability and climate resilience.",
   },
   {
-    icon: Handshake,
-    title: "Tech for Impact contributes to the following impact goals:",
-    text: "Sterkere verbinding tussen jongeren, wijk en stad",
+    src: "/assets/17.svg",
+    title: "Partnerships for the Goals",
+    text: "Building collaborations between communities, organisations and international talent.",
+  },
+];
+
+const pills = [
+  {
+    text: "Develop practical solutions for local challenges",
+    class: "transform -rotate-3",
+  },
+  {
+    text: "Support local initiatives with new ideas",
+    class: "transform rotate-2",
+  },
+  {
+    text: "Connect internationals with local communities",
+    class: "transform rotate-3",
+  },
+  {
+    text: "Build a network working on local impact",
+    class: "transform -rotate-2",
   },
 ];
 
@@ -34,7 +47,7 @@ export function Impact() {
   return (
     <section
       id="samenwerken"
-      className="relative overflow-hidden py-20 md:py-32 lg:py-40 xl:py-[18%]"
+      className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:py-[18%]"
       style={{
         backgroundImage: "url(/assets/Ellipse_yellow.svg)",
         backgroundPosition: "center center",
@@ -51,60 +64,63 @@ export function Impact() {
             width={72}
             height={72}
           />
-          <h2 className="mt-3 font-heading text-xl font-bold tracking-base uppercase sm:text-3xl md:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-heading text-2xl font-bold tracking-base uppercase sm:text-3xl md:text-4xl lg:text-5xl">
             Impact
           </h2>
         </div>
-        <div>
-          <p className="text-lg md:text-xl">
+        <div className="flex flex-col mt-10 items-center space-y-10 md:w-5/6 mx-auto">
+          <p className="text-lg text-center md:text-xl text-balance lg:w-4/5">
             Tech for Impact contributes to several of the United Nations
             Sustainable Development Goals, translating global ambitions into
-            local action in The Hague. In particular we contribute to
+            local action in The Hague. In particular we contribute to the
+            following local impact goals:
           </p>
-          <div className="mx-auto flex flex-col w-5/6 gap-2 flex-wrap sm:flex-row justify-center items-center xl:w-4/6">
-            {card.map((item) => (
-              <div></div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <p>
-            Tech for Impact brings together people and organisations who believe
-            that technology and collaboration can help address real social and
-            environmental challenges in the city.
-          </p>
-          <div>
-            {cards.map((item) => (
+          <div className="grid gap-6 sm:grid-cols-2">
+            {cards.map((item, index) => (
               <div
-                key={item.label}
-                className="flex flex-col h-full items-start p-6"
+                key={`${item.text}-${index}`}
+                className="flex flex-col h-full gap-4 rounded-lg bg-white p-6 lg:flex-row "
               >
                 <Image
                   src={item.src}
-                  alt={item.label}
-                  width={240}
-                  height={240}
+                  alt={item.title}
+                  width={100}
+                  height={100}
                 />
+                <div className="gap-6">
+                  <p className="text-xs my-2">{item.title}</p>
+                  <p className="text-md mt-4 font-semibold text-slate-900">
+                    {item.text}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-        <div>
-          <Image src="/assets/star.svg" alt="Star" width={240} height={240} />
-          <div>
-            <h5 className="text-2xl w-5/6 font-medium">
-              Interested in collaborating with Tech for Impact?
-            </h5>
-            <p>
-              We welcome people, organisations and initiatives that want to
-              share challenges, mentor teams, or support the development of new
-              solutions.
-            </p>
+
+        <div className="mt-16 py-10 text-center ">
+          <p className="text-lg font-semibold text-balance md:text-xl">
+            Each cohort brings together around 16 participants working in small
+            interdisciplinary teams with local initiatives in The Hague.
+            Together we aim to:
+          </p>
+          <div className="flex flex-col items-center my-20">
+            {pills.map((item, index) => (
+              <Pill
+                key={`${item.text}-${index}`}
+                showStar
+                text={item.text}
+                textColor="#000000"
+                className={item.class}
+                maxWidth="800px"
+              />
+            ))}
           </div>
-          <button className="mt-4 px-6 py-2 bg-yellow-400 text-black font-semibold rounded-lg">
-            Get In Touch
-          </button>
+        <button className="mt-2 rounded-sm bg-[#F15BB5] px-10 py-5 font-semibold text-lg transition hover:-translate-y-0.5">
+          Get In Touch
+        </button>
         </div>
+
       </div>
     </section>
   );

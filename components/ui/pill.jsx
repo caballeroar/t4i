@@ -9,6 +9,7 @@ export function Pill({
   textColor = "#ffffff",
   showStar = false,
   starColor = "#FFF200",
+  maxWidth = "450px",
   className,
   style,
   ...props
@@ -16,12 +17,13 @@ export function Pill({
   return (
     <span
       className={cn(
-        " items-center text-center gap-3 max-w-[450px] rounded-full  px-12 py-6 text-xl font-semibold text-balance md:text-2xl md:px-16 md:py-8",
+        " flex items-center text-center gap-3  rounded-full  px-12 py-6 text-base font-semibold text-balance md:text-2xl md:px-16 md:py-8",
         className,
       )}
       style={{
         backgroundColor: color,
         color: textColor,
+        maxWidth: maxWidth,
         ...style,
         boxShadow: "0px 4px 0px 0px rgb(9 130 170 / 0.5)",
       }}
@@ -29,7 +31,7 @@ export function Pill({
     >
       {showStar && (
         <Image
-          src="/assets/Star.svg"
+          src="/assets/Star_pink.svg"
           alt="Decorative star"
           width={28}
           height={28}

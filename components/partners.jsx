@@ -28,7 +28,7 @@ export function Partners() {
   return (
     <section
       id="samenwerken"
-      className="relative overflow-hidden py-20 md:py-32 lg:py-40 xl:py-[18%]"
+      className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:py-[18%]"
       style={{
         backgroundImage: "url(/assets/Ellipse_white.svg)",
         backgroundPosition: "center center",
@@ -99,8 +99,8 @@ export function Partners() {
           <Image
             src="/assets/star_pink.svg"
             alt="Star"
-            width={160}
-            height={200}
+            width={60}
+            height={100}
             className="object-contain aspect-square"
           />
           <div className="space-y-3">
