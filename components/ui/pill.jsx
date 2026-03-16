@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -6,6 +7,8 @@ export function Pill({
   text,
   color = "#ffffff",
   textColor = "#ffffff",
+  showStar = false,
+  starColor = "#FFF200",
   className,
   style,
   ...props
@@ -13,7 +16,7 @@ export function Pill({
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full px-14 py-8 text-2xl font-semibold ",
+        " items-center text-center gap-3 rounded-full  px-12 py-6 text-xl font-semibold text-balance md:text-2xl md:px-16 md:py-8",
         className,
       )}
       style={{
@@ -24,6 +27,18 @@ export function Pill({
       }}
       {...props}
     >
+      {showStar && (
+        <Image
+          src="/assets/Star.svg"
+          alt="Decorative star"
+          width={28}
+          height={28}
+          style={{
+            filter: starColor ? `drop-shadow(0 0 0 ${starColor})` : undefined,
+          }}
+          className="shrink-0"
+        />
+      )}
       {text}
     </span>
   );

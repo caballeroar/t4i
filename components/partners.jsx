@@ -1,58 +1,108 @@
 import { School, Building, Landmark, Heart } from "lucide-react";
+import Image from "next/image";
 
 const partners = [
   {
-    icon: School,
-    label: "Scholen en onderwijsinstellingen",
+    src: "/assets/gemeente.svg",
+    label: "Municipality of The Hague",
   },
   {
-    icon: Building,
-    label: "Wijkorganisaties en jongerenwerk",
+    src: "/assets/jcp.svg",
+    label: "Just Common People",
   },
   {
-    icon: Landmark,
-    label: "Gemeente Den Haag",
+    src: "/assets/logo.svg",
+    label: "Duurzame Den Haag",
   },
   {
-    icon: Heart,
-    label: "Fondsen en maatschappelijke financiers",
+    src: "/assets/theater.svg",
+    label: "Laak Theater",
+  },
+  {
+    src: "/assets/ac.svg",
+    label: "Amel Caballero Product Design",
   },
 ];
 
 export function Partners() {
   return (
-    <section id="samenwerken" className="bg-white py-20 md:py-28">
+    <section id="samenwerken" className="bg-white ">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
+        <div className="flex justify-end rotate-2">
+          <Image
+            className="transform -rotate-6"
+            src="/assets/Scribble.svg"
+            alt="Programme"
+            width={72}
+            height={72}
+          />
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-base uppercase  md:text-5xl ">
+            The Programme
+          </h2>
+          <Image
+            src="/assets/Scribble-1.svg"
+            alt="Programme"
+            width={72}
+            height={72}
+          />
+        </div>
+        <div>
+          <p>
+            ;Tech for Impact brings together people and organisations who
+            believe that technology and collaboration can help address real
+            social and environmental challenges in the city.
+          </p>
+          <Image
+            className="transform -rotate-6"
+            src="/assets/Scribble.svg"
+            alt="Programme"
+            width={72}
+            height={72}
+          />
+          <p>
+            ;The programme is built on collaboration and reflects the spirit of
+            United Nations Sustainable Development Goal 17: Partnerships for the
+            Goals, which recognises that meaningful change happens when
+            organisations, communities and individuals work together.
+          </p>
+        </div>
+        <div>
+          <p>
+            Tech for Impact brings together people and organisations who believe
+            that technology and collaboration can help address real social and
+            environmental challenges in the city.
+          </p>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#00BBF9]">
-              Samenwerken
-            </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-secondary-foreground md:text-4xl text-balance">
-              Samen zorgen we dat technologie bijdraagt aan een eerlijke stad
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Samen zorgen we dat technologie bijdraagt aan een eerlijke,
-              duurzame en inclusieve stad. Tech for Impact werkt samen met
-              partijen die dezelfde visie delen.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
             {partners.map((item) => (
               <div
                 key={item.label}
-                className="flex items-center gap-4 rounded-xl border border-border bg-card p-5 shadow-sm"
+                className="flex flex-col h-full items-start p-6"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#00BBF9]/10 text-[#00BBF9]">
-                  <item.icon className="h-5 w-5" />
-                </div>
-                <p className="text-sm font-medium text-card-foreground">
-                  {item.label}
-                </p>
+                <Image
+                  src={item.src}
+                  alt={item.label}
+                  width={240}
+                  height={240}
+                />
               </div>
             ))}
           </div>
+        </div>
+        <div>
+          <Image src="/assets/star.svg" alt="Star" width={240} height={240} />
+          <div>
+            <h5 className="text-2xl w-5/6 font-medium">
+              Interested in collaborating with Tech for Impact?
+            </h5>
+            <p>
+              We welcome people, organisations and initiatives that want to
+              share challenges, mentor teams, or support the development of new
+              solutions.
+            </p>
+          </div>
+          <button className="mt-4 px-6 py-2 bg-yellow-400 text-black font-semibold rounded-lg">
+            Get In Touch
+          </button>
         </div>
       </div>
     </section>

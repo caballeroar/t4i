@@ -1,4 +1,5 @@
 import { Lightbulb, Users, Globe } from "lucide-react";
+import Image from "next/image";
 
 const highlights = [
   {
@@ -25,19 +26,23 @@ export function About() {
   return (
     <section id="over-ons" className="py-20 md:py-28 bg-[#FFF200]/10">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#F15BB5]">
-            Over ons
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground md:text-4xl text-balance">
-            Technologie die iedereen meeneemt
+        <div className="flex justify-end rotate-2">
+          <Image
+            className="transform -rotate-6"
+            src="/assets/Scribble.svg"
+            alt="Programme"
+            width={72}
+            height={72}
+          />
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-base uppercase  md:text-5xl ">
+            The Programme
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Wij geloven dat technologie kan helpen bij grote vragen van deze
-            tijd. Maar alleen als iedereen mee kan doen. Wij helpen jongeren om
-            hun talent te ontwikkelen met technologie en om mee te bouwen aan
-            een eerlijke en duurzame stad.
-          </p>
+          <Image
+            src="/assets/Scribble-1.svg"
+            alt="Programme"
+            width={72}
+            height={72}
+          />
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
