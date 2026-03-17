@@ -85,7 +85,7 @@ export function ForWhom() {
         </div>
       </div>
 
-      <div className="relative  mt-16 mx-auto w-5/6  text-center  md:mt-20 md:w-4/6 md:px-12">
+      <div className="relative  mt-16 mx-auto w-5/6 text-center md:mt-20 md:w-4/6 md:px-12 lg:w-3/6">
         <p className="text-lg font-semibold md:text-xl">
           However, people from other backgrounds who are interested in
           contributing to social and environmental challenges are equally

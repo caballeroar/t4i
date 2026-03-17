@@ -1,8 +1,36 @@
 import Image from "next/image";
 
+const info = [
+  {
+    src: "/assets/Star.svg",
+    text1:
+      "Works on community driven sustainability, social innovation and collaborative urban initiatives. His work focuses on bringing together community initiatives, institutions and innovators to create collaborations that lead to meaningful and lasting change.",
+    text2:
+      "At Tech for Impact he leads the social and environmental impact side of the programme. He connects participants with neighbourhood initiatives and helps teams understand the local context so that projects respond to real community needs.",
+    name: "Jay Navarro Oviedo",
+    class: "transform -rotate-2",
+  },
+  {
+    src: "/assets/Star.svg",
+    text1:
+      "Works at the intersection of technology, creativity, and social innovation. He believes technology is most powerful when it is developed alongside the people it is meant to serve.",
+    text2:
+      "At Tech for Impact he leads the technology and design side of the programme. He supports participants in translating ideas into tangible concepts and prototypes, and helps teams explore how digital tools and design methods can support real-world challenges.",
+    name: "Amel Caballero",
+    class: "transform rotate-2",
+  },
+];
+
 export function About() {
   return (
-    <section id="over-ons" className="py-20 md:py-28">
+    <section id="over-ons" className="relative overflow-hidden py-20 md:py-28">
+      <Image
+        src="/assets/Star.svg"
+        alt="Star"
+        width={200}
+        height={200}
+        className="absolute z-5 top-0 right-[-28%] md:w-[300px] md:h-[300px] sm:right-[5%]"
+      />
       <div
         className="relative overflow-hidden mx-auto lg:max-w-[1100px] lg:max-h-[1100px] lg:-left-[10%] lg:aspect-square lg:rounded-full my-20 w-full px-6 py-20 sm:py-[30%] lg:py-40"
         style={{
@@ -48,6 +76,28 @@ export function About() {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="mx-auto flex flex-col md:flex-row mt-[-40%] md:w-5/6 md:mt-[-20%] gap-12 md:justify-between">
+        {info.map((item, index) => (
+          <div
+            key={`${item.text1}-${index}`}
+            className={`w-4/6 md:w-2/6 mx-auto flex flex-col justify-start py-20 gap-4 ${item.class}`}
+          >
+            <Image
+              src={item.src}
+              alt="Background pattern"
+              width={160}
+              height={160}
+              className=" rounded-full object-contain aspect-square"
+            />
+            <h5 className="font-heading text-md">{item.name}</h5>
+
+            <p>{item.text1}</p>
+
+            <p>{item.text2}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

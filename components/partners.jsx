@@ -28,7 +28,7 @@ export function Partners() {
   return (
     <section
       id="samenwerken"
-      className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:pt-[18%] xl:pb-[26%]"
+      className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:py-[12%] "
       style={{
         backgroundImage: "url(/assets/Ellipse_white.svg)",
         backgroundPosition: "center center",
@@ -62,7 +62,7 @@ export function Partners() {
             that technology and collaboration can help address real social and
             environmental challenges in the city.
           </p>
-          <div className="relative w-full overflow-hidden aspect-video">
+          <div className="relative w-full overflow-hidden aspect-video max-h-[380px]">
             <Image
               src="/assets/SDG.svg"
               alt="Programme"
@@ -85,6 +85,7 @@ export function Partners() {
           <div className="flex flex-wrap items-center justify-center gap-8">
             {partners.map((item) => (
               <Image
+                key={item.label}
                 src={item.src}
                 alt={item.label}
                 width={100}

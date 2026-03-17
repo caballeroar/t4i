@@ -25,7 +25,8 @@ export default function Page() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
           }}
-        ></div>
+        />
+
         <ForWhom />
 
         <Partners />
