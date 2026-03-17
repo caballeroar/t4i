@@ -46,7 +46,7 @@ const pills = [
 export function Impact() {
   return (
     <section
-      id="samenwerken"
+      id="impact"
       className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:py-[18%]"
       style={{
         backgroundImage: "url(/assets/Ellipse_yellow.svg)",
@@ -116,11 +116,14 @@ export function Impact() {
               />
             ))}
           </div>
-        <button className="mt-2 rounded-xl bg-[#F15BB5] px-10 py-5 font-semibold text-lg transition hover:-translate-y-0.5">
-          Get In Touch
-        </button>
-        </div>
 
+          <a
+            href="#contact"
+            className="inline-flex self-center items-center justify-center gap-2 rounded-lg bg-[#F15BB5] px-6 py-3.5 text-base font-semibold text-foreground transition-opacity hover:opacity-80"
+          >
+            Get in Touch
+          </a>
+        </div>
       </div>
     </section>
   );

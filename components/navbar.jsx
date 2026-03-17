@@ -5,11 +5,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Over ons", href: "#over-ons" },
-  { label: "Voor wie", href: "#voor-wie" },
-  { label: "Wat we doen", href: "#wat-we-doen" },
+  { label: "Programme", href: "#programme" },
+  { label: "For Whom", href: "#for-whom" },
+  { label: "Collaborate", href: "#collaborate" },
   { label: "Impact", href: "#impact" },
-  { label: "Samenwerken", href: "#samenwerken" },
+  { label: "About", href: "#about" },
 ];
 
 export function Navbar() {
@@ -42,7 +42,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm  transition-colors hover:font-semibold"
               >
                 {link.label}
               </a>
@@ -52,9 +52,9 @@ export function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-lg bg-[#FFF200] px-5 py-2.5 text-sm font-medium text-foreground transition-opacity hover:opacity-90 md:inline-block"
+          className="hidden rounded-lg bg-[#FFF200] px-5 py-2.5 text-sm font-semibold text-foreground transition-opacity hover:opacity-90 md:inline-block"
         >
-          Contact
+          Contact Us
         </a>
 
         {/* Mobile toggle */}

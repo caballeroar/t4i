@@ -110,11 +110,11 @@ export function ContactForm() {
       <div className="mx-auto max-w-lg rounded-xl border border-primary/20 bg-primary/10 p-8 text-center">
         <CheckCircle2 className="mx-auto h-12 w-12 text-primary" />
         <h3 className="mt-4 font-heading text-xl font-bold text-foreground">
-          Bedankt voor je bericht!
+          Thank you for contacting us!
         </h3>
         <p className="mt-2 text-muted-foreground">
-          We hebben je inzending ontvangen en nemen zo snel mogelijk contact met
-          je op via{" "}
+          We have received your submission and will get back to you as soon as
+          possible via{" "}
           <a
             href={`mailto:${EMAIL_ADDRESS}`}
             className="font-medium text-primary underline underline-offset-2 hover:text-primary/80"
@@ -127,7 +127,7 @@ export function ContactForm() {
           onClick={() => setStatus("idle")}
           className="mt-6 text-sm font-medium text-primary underline underline-offset-4 transition-colors hover:text-primary/80"
         >
-          Formulier opnieuw invullen
+          Fill out the form again
         </button>
       </div>
     );
@@ -146,7 +146,7 @@ export function ContactForm() {
       <input type="hidden" name="form-name" value={FORM_NAME} />
       <p className="hidden" aria-hidden="true">
         <label>
-          Laat dit veld leeg
+          Leave this field empty if you're human:{" "}
           <input name="bot-field" type="text" />
         </label>
       </p>
@@ -154,23 +154,23 @@ export function ContactForm() {
         <div className="flex-1">
           <label
             htmlFor="contact-name"
-            className="mb-1.5 block text-sm font-medium text-foreground"
+            className="mb-1.5 text-[#0096C8] font-semibold block text-sm"
           >
-            Naam <span className="text-destructive">*</span>
+            Name <span className="text-destructive">*</span>
           </label>
           <input
             id="contact-name"
             name="name"
             type="text"
             required
-            placeholder="Je volledige naam"
-            className="w-full rounded-lg border border-border bg-[#FFF200]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
+            placeholder="Your full name"
+            className="w-full rounded-lg border border-border bg-[#0096C8]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
           />
         </div>
         <div className="flex-1">
           <label
             htmlFor="contact-email"
-            className="mb-1.5 block text-sm font-medium text-foreground"
+            className="mb-1.5 text-[#0096C8] font-semibold block text-sm"
           >
             E-mail <span className="text-destructive">*</span>
           </label>
@@ -179,8 +179,8 @@ export function ContactForm() {
             name="email"
             type="email"
             required
-            placeholder="naam@voorbeeld.nl"
-            className="w-full rounded-lg border border-border bg-[#FFF200]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
+            placeholder="name@example.com"
+            className="w-full rounded-lg border border-border bg-[#0096C8]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
           />
         </div>
       </div>
@@ -188,33 +188,33 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="contact-organization"
-          className="mb-1.5 block text-sm font-medium text-foreground"
+          className="mb-1.5 text-[#0096C8] font-semibold block text-sm"
         >
-          Organisatie
+          Organization
         </label>
         <input
           id="contact-organization"
           name="organization"
           type="text"
-          placeholder="School, wijkorganisatie, gemeente..."
-          className="w-full rounded-lg border border-border bg-[#FFF200]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
+          placeholder="School, neighborhood organization, municipality..."
+          className="w-full rounded-lg border border-border bg-[#0096C8]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
         />
       </div>
 
       <div>
         <label
           htmlFor="contact-message"
-          className="mb-1.5 block text-sm font-medium text-foreground"
+          className="mb-1.5 text-[#0096C8] font-semibold block text-sm"
         >
-          Bericht <span className="text-destructive">*</span>
+          Message <span className="text-destructive">*</span>
         </label>
         <textarea
           id="contact-message"
           name="message"
           required
           rows={5}
-          placeholder="Vertel ons hoe we kunnen samenwerken..."
-          className="w-full resize-none rounded-lg border border-border bg-[#FFF200]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
+          placeholder="Tell us how we can collaborate..."
+          className="w-full resize-none rounded-lg border border-border bg-[#0096C8]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
         />
       </div>
 
@@ -231,16 +231,14 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#FFF200] px-8 py-3.5 text-base font-medium text-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#FFF200] px-8 py-3.5 text-base font-semibold text-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
       >
-        {status === "submitting"
-          ? "Bezig met versturen..."
-          : "Verstuur bericht"}
+        {status === "submitting" ? "Submitting..." : "Send message"}
         <Send className="h-4 w-4" />
       </button>
 
       {/* <p className="text-center text-xs text-muted-foreground">
-        Of mail direct naar{" "}
+        Or email directly to{" "}
         <a
           href={`mailto:${EMAIL_ADDRESS}`}
           className="font-medium text-primary underline underline-offset-2 hover:text-primary/80"

@@ -31,7 +31,7 @@ const audiences = [
 
 export function ForWhom() {
   return (
-    <section id="voor-wie" className="relative overflow-hidden  mt-[30%]">
+    <section className="relative overflow-hidden  mt-[30%]">
       <div className="relative flex flex-col w-5/6 mx-auto  gap-8   items-start text-left xl:w-4/6">
         <div className="flex w-full items-center gap-4">
           <h2 className="font-heading text-3xl uppercase font-bold md:text-5xl">
@@ -85,15 +85,18 @@ export function ForWhom() {
         </div>
       </div>
 
-      <div className="relative  mt-16 mx-auto w-5/6 text-center md:mt-20 md:w-4/6 md:px-12 lg:w-3/6">
+      <div className="flex flex-col mt-16 mx-auto w-5/6 gap-8 text-center md:mt-20 md:w-4/6 md:px-12 lg:w-3/6">
         <p className="text-lg font-semibold md:text-xl">
           However, people from other backgrounds who are interested in
           contributing to social and environmental challenges are equally
           welcome to participate!{" "}
         </p>
-        <button className="mt-6 inline-flex items-center justify-center rounded-full border border-white/40 bg-white/20 px-8 py-3 text-base font-semibold uppercase tracking-wide text-white transition hover:-translate-y-0.5">
-          Learn More
-        </button>
+        <a
+          href="#contact"
+          className="inline-flex self-center items-center justify-center gap-2 rounded-lg bg-[#FFF200] px-6 py-3.5 text-base font-semibold text-foreground transition-opacity hover:opacity-80"
+        >
+          Join the Next Tech 4 Impact
+        </a>
       </div>
     </section>
   );

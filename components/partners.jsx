@@ -27,8 +27,8 @@ const partners = [
 export function Partners() {
   return (
     <section
-      id="samenwerken"
-      className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:py-[12%] "
+      id="collaborate"
+      className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:py-[16%] "
       style={{
         backgroundImage: "url(/assets/Ellipse_white.svg)",
         backgroundPosition: "center center",
@@ -115,9 +115,12 @@ export function Partners() {
             solutions.
           </p>
         </div>
-        <button className="rounded-xl bg-[#FFF200] self-center px-10 py-5 font-semibold text-lg transition hover:-translate-y-0.5">
-          Get In Touch
-        </button>
+        <a
+          href="#contact"
+          className="inline-flex self-center items-center justify-center gap-2 rounded-lg bg-[#FFF200] px-6 py-3.5 text-base font-semibold text-foreground transition-opacity hover:opacity-80"
+        >
+          Get in Touch
+        </a>
       </div>
     </section>
   );

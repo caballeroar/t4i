@@ -1,11 +1,11 @@
 const footerLinks = [
-  { label: "Over ons", href: "#over-ons" },
-  { label: "Voor wie", href: "#voor-wie" },
-  { label: "Wat we doen", href: "#wat-we-doen" },
+  { label: "Programme", href: "#programme" },
+  { label: "For Whom", href: "#for-whom" },
+  { label: "Collaborate", href: "#collaborate" },
   { label: "Impact", href: "#impact" },
-  { label: "Samenwerken", href: "#samenwerken" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
-]
+];
 
 export function Footer() {
   return (
@@ -20,7 +20,7 @@ export function Footer() {
               Tech for Impact
             </a>
             <p className="mt-1 text-sm text-muted-foreground">
-              Technologie voor een eerlijke en duurzame toekomst
+              Technology for a sustainable future.
             </p>
           </div>
 
@@ -42,11 +42,11 @@ export function Footer() {
 
         <div className="mt-10 border-t border-border pt-6">
           <p className="text-center text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Tech for Impact. Alle rechten voorbehouden. Den
-            Haag, Nederland.
+            &copy; {new Date().getFullYear()} Tech 4 Impact. The Hague,
+            Netherlands.
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

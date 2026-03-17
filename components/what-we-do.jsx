@@ -47,7 +47,7 @@ const snapshot = [
 
 export function WhatWeDo() {
   return (
-    <section id="wat-we-doen" className="py-20 md:py-28 ">
+    <section id="programme" className="py-20 md:py-28 ">
       <div className="mx-auto w-full flex flex-col items-center md:gap-8 lg:w-5/6  ">
         <div className="flex items-center justify-center rotate-2 md:justify-end">
           <Image
@@ -166,9 +166,12 @@ export function WhatWeDo() {
         <p className="font-semibold text-xl sm:text-2xl md:text-3xl text-center text-pretty">
           Small enough for meaningful collaboration. Big enough for real impact.
         </p>
-        <button className="mt-4 px-6 py-2 bg-yellow-400 text-black font-semibold rounded-lg">
-          Learn More
-        </button>
+        <a
+          href="#contact"
+          className="inline-flex self-center items-center justify-center gap-2 rounded-lg bg-[#FFF200] px-6 py-3.5 text-base font-semibold text-foreground transition-opacity hover:opacity-80"
+        >
+          Join the Next Tech 4 Impact
+        </a>
       </div>
     </section>
   );

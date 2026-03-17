@@ -23,7 +23,7 @@ const info = [
 
 export function About() {
   return (
-    <section id="over-ons" className="relative overflow-hidden py-20 md:py-28">
+    <section id="about" className="relative overflow-hidden py-20 md:py-28">
       <Image
         src="/assets/Star.svg"
         alt="Star"
