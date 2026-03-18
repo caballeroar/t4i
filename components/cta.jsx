@@ -1,5 +1,5 @@
 import { ContactForm } from "@/components/contact-form";
-import { Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export function CTA() {
   return (
@@ -9,7 +9,7 @@ export function CTA() {
           <h3 className="font-heading text-3xl font-bold text-[#04A6DC] md:text-4xl lg:text-5xl text-balance">
             Contact Us
           </h3>
-          <p className="mx-auto text-[#04A6DC] mt-5 max-w-xl text-lg font-semibold">
+          <p className="mx-auto text-[#04A6DC] mt-5 max-w-xl text-lg font-semibold text-pretty">
             Whether you are a neighborhood organization, municipality, or fund —
             we are open to collaboration. Contact us and discover the
             possibilities.
@@ -29,7 +29,14 @@ export function CTA() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-[#0096C8]/30 px-5 py-2 text-sm font-semibold text-[#0096C8] transition hover:-translate-y-0.5 hover:border-[#0096C8]"
               >
-                <Linkedin className="h-4 w-4" aria-hidden />
+                <Image
+                  src="/assets/linkedin.svg"
+                  alt="LinkedIn logo"
+                  width={20}
+                  height={20}
+                  priority
+                  className="object-contain"
+                />
                 LinkedIn
               </a>
               <a
@@ -38,7 +45,14 @@ export function CTA() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-[#0096C8]/30 px-5 py-2 text-sm font-semibold text-[#0096C8] transition hover:-translate-y-0.5 hover:border-[#0096C8]"
               >
-                <Instagram className="h-4 w-4" aria-hidden />
+                <Image
+                  src="/assets/Instagram.svg"
+                  alt="Instagram logo"
+                  width={20}
+                  height={20}
+                  priority
+                  className="object-contain"
+                />
                 Instagram
               </a>
             </div>

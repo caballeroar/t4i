@@ -24,7 +24,7 @@ export function Navbar() {
           aria-label="Tech for Impact home"
         >
           <Image
-            src="/logo.png"
+            src="/t4i.svg"
             alt="Tech for Impact logo"
             width={48}
             height={48}

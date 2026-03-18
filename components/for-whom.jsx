@@ -51,12 +51,12 @@ export function ForWhom() {
         </p>
       </div>
 
-      <div className="relative w-full min-h-[240px] aspect-video  sm:w-4/6 overflow-hidden rounded-3xl transform -rotate-2 xl:w-4/6 mx-auto mt-16">
+      <div className="relative w-full min-h-[240px] aspect-[16/11]  sm:w-4/6 overflow-hidden rounded-3xl transform -rotate-2 xl:w-4/6 mx-auto mt-16">
         <Image
-          src="/assets/participants.webp"
+          src="/assets/participants.png"
           alt="Participants working together"
           fill
-          className="object-contain rounded-3xl"
+          className="object-cover rounded-3xl"
         />
       </div>
 

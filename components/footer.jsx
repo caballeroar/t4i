@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const footerLinks = [
   { label: "Programme", href: "#programme" },
   { label: "For Whom", href: "#for-whom" },
@@ -13,11 +15,15 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <a
-              href="#"
-              className="font-heading text-lg font-bold tracking-tight text-foreground"
-            >
-              Tech for Impact
+            <a href="#">
+              <Image
+                src="/assets/t4i_2.svg"
+                alt="Tech for Impact logo"
+                width={48}
+                height={48}
+                priority
+                className="w-full h-12 object-contain"
+              />
             </a>
             <p className="mt-1 text-sm text-muted-foreground">
               Technology for a sustainable future.

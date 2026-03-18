@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const info = [
   {
-    src: "/assets/Star.svg",
+    src: "/assets/jay.jpg",
     text1:
       "Works on community driven sustainability, social innovation and collaborative urban initiatives. His work focuses on bringing together community initiatives, institutions and innovators to create collaborations that lead to meaningful and lasting change.",
     text2:
@@ -11,7 +11,7 @@ const info = [
     class: "transform -rotate-2",
   },
   {
-    src: "/assets/Star.svg",
+    src: "/assets/amel.png",
     text1:
       "Works at the intersection of technology, creativity, and social innovation. He believes technology is most powerful when it is developed alongside the people it is meant to serve.",
     text2:
@@ -89,7 +89,7 @@ export function About() {
               alt="Background pattern"
               width={160}
               height={160}
-              className=" rounded-full object-contain aspect-square"
+              className=" rounded-full object-cover aspect-square"
             />
             <h5 className="font-heading text-md">{item.name}</h5>
 
