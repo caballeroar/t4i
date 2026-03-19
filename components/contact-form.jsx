@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 
-const EMAIL_ADDRESS = "amelrc@yahoo.com";
+const EMAIL_ADDRESS = "webmaster@tech4impactlab.org";
 const FORM_NAME = "contact-form";
 
 // Netlify sometimes responds with 400/404 while still storing the submission; detect that case.
