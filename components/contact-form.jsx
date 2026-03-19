@@ -109,7 +109,7 @@ export function ContactForm() {
     return (
       <div className="mx-auto max-w-lg rounded-xl border border-primary/20 bg-primary/10 p-8 text-center">
         <CheckCircle2 className="mx-auto h-12 w-12 text-primary" />
-        <h3 className="mt-4 font-heading text-xl font-bold text-foreground">
+        <h3 className="mt-4 text-xl font-bold text-foreground">
           Thank you for contacting us!
         </h3>
         <p className="mt-2 text-muted-foreground">
