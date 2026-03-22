@@ -10,9 +10,8 @@ export function CTA() {
             Contact Us
           </h3>
           <p className="mx-auto text-[#04A6DC] mt-5 max-w-xl text-lg font-semibold text-pretty">
-            Whether you are a neighborhood organization, municipality, or fund —
-            we are open to collaboration. Contact us and discover the
-            possibilities.
+            Send us a message to join the programme, collaborate with us, or be
+            part of the team.
           </p>
         </div>
         <div className="mt-12 space-y-10">

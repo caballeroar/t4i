@@ -3,7 +3,7 @@ import { Pill } from "./ui/pill";
 
 const pills = [
   { text: "Sustainable Food", class: "transform -rotate-3" },
-  { text: "Climate Resilience", class: "transform rotate-3" },
+  { text: "Greener Streets", class: "transform rotate-3" },
   { text: "Cleaner Neighbourhoods", class: "transform rotate-3" },
   { text: "Climate Justice", class: "transform -rotate-3" },
 ];
@@ -28,7 +28,7 @@ const activities = [
 ];
 const snapshot = [
   {
-    number: "10",
+    number: "4",
     text: "weeks",
   },
   {
@@ -69,7 +69,7 @@ export function WhatWeDo() {
         </div>
 
         <p className="mt-12 w-5/6 text-xl font-bold tracking-base transform -rotate-3 md:text-2xl lg:w-4/6 text-balance">
-          Join a 10-week innovation journey working in small interdisciplinary
+          Join a 4-week innovation journey working in small interdisciplinary
           teams to collaborate with local initiatives for exploring challenges
           such as
         </p>
@@ -156,15 +156,36 @@ export function WhatWeDo() {
         <div className="flex flex-col gap-4">
           <h5 className="font-semibold text-2xl">Time commitment</h5>
           <p className="text-lg  text-pretty">
-            3 to 4 hours per week, including a weekly session (usually on
-            Saturdays) and some team collaboration in between.
+            3 to 4 hours per week and some team collaboration in between.
+          </p>
+        </div>
+      </div>
+      <div
+        className="relative mx-auto flex w-full max-w-[520px] md:max-w-[620px] min-h-[340px] md:min-h-[400px] items-center justify-center py-20"
+        style={{
+          backgroundImage: 'url("/assets/circled_2.svg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="flex flex-col items-center w-5/6 text-center gap-8 sm:w-4/6 md:w-3/6">
+          <p className=" font-heading text-2xl text-[#FFF200] transform -rotate-6">
+            The GOAL
+          </p>
+
+          <p className="w-5/6 text-xl font-bold -rotate-3 text-[#FFF200]">
+            Support already working initiatives and explore how new ideas and
+            tools can strengthen their impact.
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-6 py-20 px-10 w-full md:w-4/6 lg:w-3/6 mx-auto">
+      {/* <div className="flex flex-col items-center gap-6 py-20 px-10 w-full md:w-4/6 lg:w-3/6 mx-auto">
         <p className="font-semibold text-xl sm:text-2xl md:text-3xl text-center text-pretty">
-          Small enough for meaningful collaboration. Big enough for real impact.
+          Small enough for meaningful collaboration.
+          <br />
+          Big enough for real impact.
         </p>
         <a
           href="#contact"
@@ -172,7 +193,7 @@ export function WhatWeDo() {
         >
           Join the Next Tech 4 Impact
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }

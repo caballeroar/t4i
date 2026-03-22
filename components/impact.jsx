@@ -10,7 +10,7 @@ const cards = [
   {
     src: "/assets/11.svg",
     title: "Sustainable Cities and Communities",
-    text: "Supporting stronger, more liveable neighbourhoods.",
+    text: "Supporting stronger communities and neighbourhoods.",
   },
   {
     src: "/assets/13.svg",
@@ -65,12 +65,12 @@ export function Impact() {
             height={72}
           />
           <h2 className="mt-3 font-heading text-2xl font-bold tracking-base uppercase sm:text-3xl md:text-4xl lg:text-5xl">
-            Impact
+            Our Impact
           </h2>
         </div>
         <div className="flex flex-col mt-10 items-center space-y-10 md:w-5/6 mx-auto">
           <p className="text-lg text-center md:text-xl text-balance lg:w-4/5">
-            Tech for Impact contributes to several of the United Nations
+            Tech 4 Impact contributes to several of the United Nations
             Sustainable Development Goals, translating global ambitions into
             local action in The Hague. In particular we contribute to the
             following local impact goals:
@@ -102,7 +102,7 @@ export function Impact() {
           <p className="text-lg font-semibold text-balance md:text-xl">
             Each cohort brings together around 16 participants working in small
             interdisciplinary teams with local initiatives in The Hague.
-            Together we aim to:
+            Together we aim to
           </p>
           <div className="flex flex-col items-center my-20">
             {pills.map((item, index) => (

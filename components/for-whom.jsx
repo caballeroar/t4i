@@ -6,7 +6,7 @@ const audiences = [
     text: "Young professional working in technology, design or sustainability",
     class: "transform -rotate-3",
   },
-  { text: "Technology", class: "transform -rotate-3" },
+  // { text: "Technology", class: "transform -rotate-3" },
   {
     text: "Expats who wants to connect with local initiatives",
     class: "transform rotate-3",
@@ -15,9 +15,9 @@ const audiences = [
     text: "Someone curious about technology for social good",
     class: "transform rotate-3",
   },
-  { text: "Sustainability", class: "transform -rotate-3" },
-  { text: "Community Work", class: "transform rotate-3" },
-  { text: "Communications", class: "transform -rotate-3" },
+  // { text: "Sustainability", class: "transform -rotate-3" },
+  // { text: "Community Work", class: "transform rotate-3" },
+  // { text: "Communications", class: "transform -rotate-3" },
   {
     text: "Someone with a migration background interested in innovation",
     class: "transform rotate-3",
@@ -26,14 +26,14 @@ const audiences = [
     text: "International students studying in The Hague",
     class: "transform -rotate-3",
   },
-  { text: "Entrepreneurship", class: "transform rotate-3" },
+  // { text: "Entrepreneurship", class: "transform rotate-3" },
 ];
 
 export function ForWhom() {
   return (
     <section className="relative overflow-hidden  mt-[30%]">
       <div className="relative flex flex-col w-5/6 mx-auto  gap-8   items-start text-left xl:w-4/6">
-        <div className="flex w-full items-center gap-4">
+        <div className="flex w-full items-center gap-4 ">
           <h2 className="font-heading text-3xl uppercase font-bold md:text-5xl">
             For Whom
           </h2>
@@ -45,7 +45,7 @@ export function ForWhom() {
           />
         </div>
         <p className="text-lg font-semibold md:text-xl text-balance">
-          Tech for Impact welcomes international residents in The Hague who want
+          Tech 4 Impact welcomes international residents in The Hague who want
           to use their time, skills, and creativity to push community projects
           forward.
         </p>
@@ -70,7 +70,7 @@ export function ForWhom() {
 
       <div className="relative z-10 flex flex-col items-center gap-12 mx-auto py-20 w-5/6 text-center md:w-5/6">
         <p className="text-xl font-semibold md:text-2xl text-balance ">
-          We welcome participants with backgrounds in areas such as
+          People we welcome to join the programme are
         </p>
         <div className="mx-auto flex flex-col w-full gap-2 flex-wrap sm:flex-row justify-center items-center ">
           {audiences.map((item, index) => {

@@ -58,8 +58,8 @@ export function Partners() {
 
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center gap-10">
           <p className="font-semibold text-lg md:text-xl">
-            Tech for Impact brings together people and organisations who believe
-            that technology and collaboration can help address real social and
+            Tech 4 Impact brings together people and organisations who believe
+            that technology and collaboration can help address social and
             environmental challenges in the city.
           </p>
           <div className="relative w-full overflow-hidden aspect-video max-h-[380px]">
@@ -72,8 +72,10 @@ export function Partners() {
           </div>
           <p className="font-semibold text-lg md:text-xl">
             The programme is built on collaboration and reflects the spirit of
-            United Nations Sustainable Development Goal 17: Partnerships for the
-            Goals.
+            United Nations Sustainable Development{" "}
+            <span className="underline">
+              Goal 17: Partnerships for the Goals.
+            </span>
           </p>
         </div>
 
@@ -97,7 +99,7 @@ export function Partners() {
         </div>
       </div>
 
-      <div className="flex flex-col w-4/6 mx-auto justify-center my-40 gap-6 text-center lg:flex-row lg:gap-4">
+      <div className="flex flex-col w-4/6 mx-auto justify-center align-center my-40 gap-6 text-center lg:flex-row lg:gap-4">
         <Image
           src="/assets/star_pink.svg"
           alt="Star"
@@ -105,16 +107,10 @@ export function Partners() {
           height={100}
           className="object-contain aspect-square"
         />
-        <div className="space-y-3 lg:w-3/6">
-          <h5 className="text-xl lg:text-start font-semibold">
-            Interested in collaborating with Tech for Impact?
-          </h5>
-          <p className="text-base lg:text-start">
-            We welcome people, organisations, and initiatives that want to share
-            challenges, mentor teams, or support the development of new
-            solutions.
-          </p>
-        </div>
+        <h5 className="text-xl lg:text-start font-semibold">
+          Interested in collaborating with Tech 4 Impact?
+        </h5>
+
         <a
           href="#contact"
           className="inline-flex self-center items-center justify-center gap-2 rounded-lg bg-[#FFF200] px-6 py-3.5 text-base font-semibold text-foreground transition-opacity hover:opacity-80"

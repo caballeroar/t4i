@@ -60,8 +60,8 @@ export function About() {
               communities and working together to build solutions that matter.
             </p>
             <p className="ml-12 mt-6 text-start text-lg text-balance transform rotate-1 md:text-xl">
-              Tech for Impact is a community-driven innovation initiative based
-              in The Hague.
+              Tech 4 Impact is a community-driven innovation initiative based in
+              The Hague.
             </p>
             <p className="ml-16 mt-6 text-start text-lg text-balance transform -rotate-2 md:text-xl">
               The programme connects international talent with residents,
@@ -71,8 +71,8 @@ export function About() {
             </p>
             <p className="ml-20 mt-6 text-start text-lg text-balance transform rotate-2 md:text-xl">
               By bringing together community knowledge, technology and creative
-              thinking, Tech for Impact turns the neighbourhood into a living
-              lab for inclusive urban innovation.
+              thinking, Tech 4 Impact turns the neighbourhood into a living lab
+              for inclusive urban innovation.
             </p>
           </div>
         </div>
