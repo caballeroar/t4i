@@ -50,13 +50,21 @@ export function ForWhom() {
           forward.
         </p>
       </div>
-
-      <div className="relative w-full min-h-[240px] aspect-[16/11]  sm:w-4/6 overflow-hidden rounded-3xl transform -rotate-2 xl:w-4/6 mx-auto mt-16">
+      <div className="relative">
+        <div className="relative w-full min-h-[240px] aspect-[16/11]  sm:w-4/6 overflow-hidden rounded-3xl transform -rotate-2 xl:w-4/6 mx-auto mt-16">
+          <Image
+            src="/assets/participants.png"
+            alt="Participants working together"
+            fill
+            className="object-cover rounded-3xl"
+          />
+        </div>
         <Image
-          src="/assets/participants.png"
-          alt="Participants working together"
-          fill
-          className="object-cover rounded-3xl"
+          src="/assets/programmer.svg"
+          alt="No need to be a programmer"
+          width={340}
+          height={40}
+          className="object-contain absolute -bottom-10 right-0 lg:bottom-[3%] lg:right-[4%] xl:w-[440px]"
         />
       </div>
 
