@@ -59,23 +59,23 @@ export function ContactForm() {
     const message = (formData.get("message") || "").toString().trim();
 
     if (!name) {
-      setErrorMessage("Vul je naam in.");
+      setErrorMessage("Add your name.");
       setStatus("error");
       return;
     }
     if (!email) {
-      setErrorMessage("Vul je e-mailadres in.");
+      setErrorMessage("Add your email address.");
       setStatus("error");
       return;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setErrorMessage("Voer een geldig e-mailadres in.");
+      setErrorMessage("Enter a valid email address.");
       setStatus("error");
       return;
     }
     if (!message) {
-      setErrorMessage("Vul een bericht in.");
+      setErrorMessage("Enter a message.");
       setStatus("error");
       return;
     }
@@ -92,14 +92,14 @@ export function ContactForm() {
       });
 
       if (!isNetlifySubmissionResponse(response)) {
-        throw new Error("Kon het formulier niet versturen.");
+        throw new Error("Could not submit the form.");
       }
 
       formElement.reset();
       setStatus("success");
     } catch (error) {
       setErrorMessage(
-        "Er ging iets mis bij het versturen. Probeer het opnieuw.",
+        "Something went wrong while submitting. Please try again.",
       );
       setStatus("error");
     }
