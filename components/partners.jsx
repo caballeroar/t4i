@@ -28,7 +28,7 @@ export function Partners() {
   return (
     <section
       id="collaborate"
-      className="relative overflow-hidden my-20 py-20 md:py-32 lg:py-40 xl:py-[16%] "
+      className="relative overflow-hidden my-20 py-20 md:py-32 lg:pt-[12%] pb-20"
       style={{
         backgroundImage: "url(/assets/Ellipse_white.svg)",
         backgroundPosition: "center center",
@@ -99,7 +99,7 @@ export function Partners() {
         </div>
       </div>
 
-      <div className="flex flex-col w-4/6 mx-auto justify-center align-center my-40 gap-6 text-center lg:flex-row lg:gap-4">
+      <div className="flex flex-col w-4/6 mx-auto justify-center items-center  my-40 gap-6 text-center lg:flex-row lg:gap-4">
         <Image
           src="/assets/star_pink.svg"
           alt="Star"

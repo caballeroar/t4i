@@ -3,23 +3,23 @@ import { Pill } from "./ui/pill";
 
 const audiences = [
   {
-    text: "Young professional working in technology, design or sustainability",
+    text: "Young professionals working in technology, design or sustainability",
     class: "transform -rotate-3",
   },
   // { text: "Technology", class: "transform -rotate-3" },
   {
-    text: "Expats who wants to connect with local initiatives",
+    text: "Expats who want to connect with local initiatives",
     class: "transform rotate-3",
   },
   {
-    text: "Someone curious about technology for social good",
+    text: "People curious about technology for social good",
     class: "transform rotate-3",
   },
   // { text: "Sustainability", class: "transform -rotate-3" },
   // { text: "Community Work", class: "transform rotate-3" },
   // { text: "Communications", class: "transform -rotate-3" },
   {
-    text: "Someone with a migration background interested in innovation",
+    text: "People with a migration background interested in innovation",
     class: "transform rotate-3",
   },
   {
@@ -93,7 +93,7 @@ export function ForWhom() {
         </div>
       </div>
 
-      <div className="flex flex-col mt-16 mx-auto w-5/6 gap-8 text-center md:mt-20 md:w-4/6 md:px-12 lg:w-3/6">
+      <div className="flex flex-col mt-8 mx-auto w-5/6 gap-8 text-center md:mt-10 md:w-4/6 md:px-12 lg:w-3/6">
         <p className="text-lg font-semibold md:text-xl">
           However, people from other backgrounds who are interested in
           contributing to social and environmental challenges are equally

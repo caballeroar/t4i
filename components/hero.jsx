@@ -17,7 +17,7 @@ export function Hero() {
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="#programme"
+                  href="#contact"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#FFF200] px-6 py-3.5 text-base font-semibold text-foreground transition-opacity hover:opacity-80"
                 >
                   Join the Programme <ArrowRight className="h-4 w-4" />

@@ -6,7 +6,7 @@ const info = [
     text1:
       "Works on community driven sustainability, social innovation and collaborative urban initiatives. His work focuses on bringing together community initiatives, institutions and innovators to create collaborations that lead to meaningful and lasting change.",
     text2:
-      "At Tech for Impact he leads the social and environmental impact side of the programme. He connects participants with neighbourhood initiatives and helps teams understand the local context so that projects respond to real community needs.",
+      "At Tech 4 Impact he leads the social and environmental impact side of the programme. He connects participants with neighbourhood initiatives and helps teams understand the local context so that projects respond to real community needs.",
     name: "Jay Navarro Oviedo",
     class: "transform -rotate-2",
   },
@@ -15,7 +15,7 @@ const info = [
     text1:
       "Works at the intersection of technology, creativity, and social innovation. He believes technology is most powerful when it is developed alongside the people it is meant to serve.",
     text2:
-      "At Tech for Impact he leads the technology and design side of the programme. He supports participants in translating ideas into tangible concepts and prototypes, and helps teams explore how digital tools and design methods can support real-world challenges.",
+      "At Tech 4 Impact he leads the technology and design side of the programme. He supports participants in translating ideas into tangible concepts and prototypes, and helps teams explore how digital tools and design methods can support real-world challenges.",
     name: "Amel Caballero",
     class: "transform rotate-2",
   },
