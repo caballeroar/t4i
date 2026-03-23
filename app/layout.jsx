@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "Tech 4 Impact — Technology for a sustainable community",
   description:
-    "We help internationals to develop their talents with technology and contribute to a fair and sustainable city.",
+    "Bringing internationals together to solve real local challenges with technology",
   icons: {
     icon: "/favicon.png",
   },
