@@ -3,16 +3,16 @@ import { Pill } from "./ui/pill";
 
 const audiences = [
   {
-    text: "Young professionals working in technology, design or sustainability",
+    text: "Young professionals working in technology, design, or sustainability",
     class: "transform -rotate-3",
   },
   // { text: "Technology", class: "transform -rotate-3" },
   {
-    text: "Expats who want to connect with local initiatives",
+    text: "Internationals who want to connect with local initiatives",
     class: "transform rotate-3",
   },
   {
-    text: "People curious about technology for social good",
+    text: "People curious about using technology for social good",
     class: "transform rotate-3",
   },
   // { text: "Sustainability", class: "transform -rotate-3" },
@@ -34,26 +34,26 @@ export function ForWhom() {
     <section className="relative overflow-hidden  mt-[30%]">
       <div className="relative flex flex-col w-5/6 mx-auto  gap-8   items-start text-left xl:w-4/6">
         <div className="flex w-full items-center gap-4 ">
-          <h2 className="font-heading text-3xl uppercase font-bold md:text-5xl">
-            For Whom
-          </h2>
           <Image
             src="/assets/Welcome.svg"
             alt="Welcome sticker"
             width={64}
             height={64}
           />
+          <h2 className="font-heading text-3xl uppercase font-bold md:text-5xl">
+            Who we’re looking for
+          </h2>
         </div>
         <p className="text-lg font-semibold md:text-xl text-balance">
-          Tech 4 Impact welcomes international residents in The Hague who want
-          to use their time, skills, and creativity to push community projects
-          forward.
+          Tech 4 Impact welcomes international residents of The Hague who want
+          to volunteer their time, skills, and creativity to support local
+          projects.
         </p>
       </div>
       <div className="relative">
         <div className="relative w-full min-h-[240px] aspect-[16/11]  sm:w-4/6 overflow-hidden rounded-3xl transform -rotate-2 xl:w-4/6 mx-auto mt-16">
           <Image
-            src="/assets/participants.png"
+            src="/assets/t4i_image_team.jpg"
             alt="Participants working together"
             fill
             className="object-cover rounded-3xl"
@@ -70,7 +70,7 @@ export function ForWhom() {
 
       <div className="relative z-10 flex flex-col items-center gap-12 mx-auto py-20 w-5/6 text-center md:w-5/6">
         <p className="text-xl font-semibold md:text-2xl text-balance ">
-          People we welcome to join the programme are
+          Our ideal participants are
         </p>
         <div className="mx-auto flex flex-col w-full gap-2 flex-wrap sm:flex-row justify-center items-center ">
           {audiences.map((item, index) => {
@@ -97,13 +97,13 @@ export function ForWhom() {
         <p className="text-lg font-semibold md:text-xl">
           However, people from other backgrounds who are interested in
           contributing to social and environmental challenges are equally
-          welcome to participate!{" "}
+          welcome to participate!
         </p>
         <a
           href="#contact"
           className="inline-flex self-center items-center justify-center gap-2 rounded-lg bg-[#FFF200] px-6 py-3.5 text-base font-semibold text-foreground transition-opacity hover:opacity-80"
         >
-          Join the Next Tech 4 Impact
+          Join the next Tech 4 Impact programme
         </a>
       </div>
     </section>

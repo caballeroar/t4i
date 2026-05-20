@@ -4,7 +4,7 @@ const info = [
   {
     src: "/assets/jay.jpg",
     text1:
-      "Works on community driven sustainability, social innovation and collaborative urban initiatives. His work focuses on bringing together community initiatives, institutions and innovators to create collaborations that lead to meaningful and lasting change.",
+      "Jay works on community-driven sustainability, social innovation and collaborative urban initiatives. His work focuses on bringing together community initiatives, institutions and innovators to create collaborations that lead to meaningful and lasting change.",
     text2:
       "At Tech 4 Impact he leads the social and environmental impact side of the programme. He connects participants with neighbourhood initiatives and helps teams understand the local context so that projects respond to real community needs.",
     name: "Jay Navarro Oviedo",
@@ -13,7 +13,7 @@ const info = [
   {
     src: "/assets/amel.png",
     text1:
-      "Works at the intersection of technology, creativity, and social innovation. He believes technology is most powerful when it is developed alongside the people it is meant to serve.",
+      "Amel works at the intersection of technology, creativity, and social innovation. He believes technology is most powerful when it is developed alongside the people it is meant to serve.",
     text2:
       "At Tech 4 Impact he leads the technology and design side of the programme. He supports participants in translating ideas into tangible concepts and prototypes, and helps teams explore how digital tools and design methods can support real-world challenges.",
     name: "Amel Caballero",
@@ -56,24 +56,25 @@ export function About() {
 
           <div className="mt-16 flex flex-col gap-6 px-4 py-10 text-[#F15BB5] md:ml-20 md:w-4/6 lg:ml-32">
             <p className="ml-8 text-start text-xl font-semibold text-balance transform -rotate-2 md:text-xl">
-              We believe meaningful innovation starts with listening to
-              communities and working together to build solutions that matter.
+              We believe meaningful innovation begins with listening to
+              communities and collaborating to build solutions that make an
+              impact.
             </p>
             <p className="ml-12 mt-6 text-start text-lg text-balance transform rotate-1 md:text-xl">
-              Tech 4 Impact is a community-driven innovation initiative based in
-              The Hague.
+              Our goal is to connect international residents of The Hague with
+              local initiatives, and to collaborate to address social and
+              environmental challenges.
             </p>
             <p className="ml-16 mt-6 text-start text-lg text-balance transform -rotate-2 md:text-xl">
-              The programme connects international talent with residents,
-              neighbourhood initiatives and organisations to develop
-              technology-based solutions for social and environmental
-              challenges.
-            </p>
-            <p className="ml-20 mt-6 text-start text-lg text-balance transform rotate-2 md:text-xl">
-              By bringing together community knowledge, technology and creative
+              By bringing together community knowledge, technology, and creative
               thinking, Tech 4 Impact turns the neighbourhood into a living lab
               for inclusive urban innovation.
             </p>
+            {/* <p className="ml-20 mt-6 text-start text-lg text-balance transform rotate-2 md:text-xl">
+              By bringing together community knowledge, technology and creative
+              thinking, Tech 4 Impact turns the neighbourhood into a living lab
+              for inclusive urban innovation.
+            </p> */}
           </div>
         </div>
       </div>

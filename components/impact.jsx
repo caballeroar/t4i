@@ -1,6 +1,29 @@
 import Image from "next/image";
 import { Pill } from "./ui/pill";
 
+const partners = [
+  {
+    src: "/assets/gemeente.svg",
+    label: "Municipality of The Hague",
+  },
+  {
+    src: "/assets/JCP_OFFICIAL_LOGO_FULL_squared_trimmed.png",
+    label: "Just Common People",
+  },
+  {
+    src: "/assets/logo.svg",
+    label: "Duurzame Den Haag",
+  },
+  {
+    src: "/assets/theater.svg",
+    label: "Laak Theater",
+  },
+  {
+    src: "/assets/ac.svg",
+    label: "Amel Caballero Product Design",
+  },
+];
+
 const cards = [
   {
     src: "/assets/9.svg",
@@ -26,11 +49,11 @@ const cards = [
 
 const pills = [
   {
-    text: "Develop practical solutions for local challenges",
+    text: "Develop practical solutions to local challenges",
     class: "transform -rotate-3",
   },
   {
-    text: "Support local initiatives with new ideas",
+    text: "Support local initiatives with new ideas and tools",
     class: "transform rotate-2",
   },
   {
@@ -38,7 +61,7 @@ const pills = [
     class: "transform rotate-3",
   },
   {
-    text: "Build a network working on local impact",
+    text: "Build a network focused on lasting local impact",
     class: "transform -rotate-2",
   },
 ];
@@ -70,9 +93,9 @@ export function Impact() {
         </div>
         <div className="flex flex-col mt-10 items-center space-y-10 md:w-5/6 mx-auto">
           <p className="text-lg text-center md:text-xl text-balance lg:w-4/5">
-            Tech 4 Impact contributes to several of the United Nations
+            Tech 4 Impact contributes to several of the United Nations’
             Sustainable Development Goals, translating global ambitions into
-            local action in The Hague. In particular we contribute to the
+            local action in The Hague. In particular, we contribute to the
             following local impact goals:
           </p>
           <div className="grid gap-6 sm:grid-cols-2">
@@ -100,9 +123,9 @@ export function Impact() {
 
         <div className="mt-16 py-10 text-center ">
           <p className="text-lg font-semibold text-balance md:text-xl">
-            Each cohort brings together around 16 participants working in small
-            interdisciplinary teams with local initiatives in The Hague.
-            Together we aim to
+            Each four-week programme brings together around 16 participants
+            working in small, interdisciplinary teams alongside local
+            initiatives in The Hague. Together, we
           </p>
           <div className="flex flex-col items-center my-20">
             {pills.map((item, index) => (
@@ -123,6 +146,25 @@ export function Impact() {
           >
             Get in Touch
           </a>
+        </div>
+
+        <div className="space-y-8 text-center">
+          <p className=" text-md">
+            We work with partners who share a commitment to long-term community
+            impact.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            {partners.map((item) => (
+              <Image
+                key={item.label}
+                src={item.src}
+                alt={item.label}
+                width={100}
+                height={100}
+                className="object-contain"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

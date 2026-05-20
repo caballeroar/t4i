@@ -28,8 +28,7 @@ export default function Page() {
         />
 
         <ForWhom />
-
-        <Partners />
+        {/* <Partners /> */}
         <Impact />
         <About />
         <CTA />

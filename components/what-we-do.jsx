@@ -2,10 +2,10 @@ import Image from "next/image";
 import { Pill } from "./ui/pill";
 
 const pills = [
-  { text: "Sustainable Food", class: "transform -rotate-3" },
-  { text: "Greener Streets", class: "transform rotate-3" },
-  { text: "Cleaner Neighbourhoods", class: "transform rotate-3" },
-  { text: "Climate Justice", class: "transform -rotate-3" },
+  { text: "Sustainable food", class: "transform -rotate-3" },
+  { text: "Greener streets", class: "transform rotate-3" },
+  { text: "Cleaner neighbourhoods", class: "transform rotate-3" },
+  { text: "Climate justice", class: "transform -rotate-3" },
 ];
 
 const activities = [
@@ -69,9 +69,9 @@ export function WhatWeDo() {
         </div>
 
         <p className="mt-12 w-5/6 text-xl font-bold tracking-base transform -rotate-3 md:text-2xl lg:w-4/6 text-balance">
-          Join a 4-week innovation journey working in small interdisciplinary
-          teams to collaborate with local initiatives for exploring challenges
-          such as
+          Take part in a four-week innovation journey, working in small
+          interdisciplinary teams and collaborating with local initiatives to
+          explore challenges such as
         </p>
         <Image src="/assets/Arrow_1.svg" alt="Arrow" width={100} height={100} />
       </div>
@@ -160,7 +160,7 @@ export function WhatWeDo() {
           </p>
         </div>
       </div>
-      <div
+      {/* <div
         className="relative mx-auto flex w-full max-w-[520px] md:max-w-[620px] min-h-[340px] md:min-h-[400px] items-center justify-center py-20"
         style={{
           backgroundImage: 'url("/assets/circled_2.svg")',
@@ -179,7 +179,7 @@ export function WhatWeDo() {
             tools can strengthen their impact.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* <div className="flex flex-col items-center gap-6 py-20 px-10 w-full md:w-4/6 lg:w-3/6 mx-auto">
         <p className="font-semibold text-xl sm:text-2xl md:text-3xl text-center text-pretty">

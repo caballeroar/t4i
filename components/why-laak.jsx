@@ -25,7 +25,7 @@ export function WhyLaak() {
       <div className="w-5/6 justify-between flex flex-col gap-10 items-center mx-auto">
         <div className="flex justify-end -rotate-2">
           <h2 className="inline-block mt-3 font-heading text-3xl font-bold tracking-base  md:text-5xl">
-            It takes place in Laak
+            Creating an impact in Laak
           </h2>
           <Image
             src="/assets/Love.svg"
@@ -37,17 +37,21 @@ export function WhyLaak() {
         <div className="flex w-full flex-col justify-between gap-10">
           <p className="mt-3 w-full text-xl transform -rotate-2 md:w-1/2 md:self-start md:text-2xl text-balance">
             <strong>Laak</strong> is home to people from many different
-            backgrounds and cultures. The neighbourhood also hosts a growing
-            network of community initiatives, residents and organisations that
-            are actively working on improving their environment and
-            strengthening the community.
+            backgrounds and cultures, and to a growing network of community
+            initiatives, residents, and organisations working to improve the
+            environment and strengthen the community.
           </p>
           <p className="mt-3 w-full text-xl transform rotate-2 md:w-1/2 md:self-end md:text-2xl text-balance">
-            At the same time <strong>Laak</strong> faces challenges that are
-            shared by many urban neighbourhoods. Issues such as energy
-            affordability, access to healthy and sustainable food, climate
-            resilience and the quality of public space affect everyday life for
-            many residents.
+            At the same time, the neighbourhood faces common urban challenges
+            that impact residents’ lives, including energy affordability, access
+            to healthy and sustainable food, climate resilience and the quality
+            of public spaces. 
+            <br/>
+            <br/>
+            Because of these needs and the strong network of
+            local initiatives, Tech 4 Impact focuses its programmes in Laak.
+            This is a neighbourhood where practical, tech-focused solutions can
+            make a real, lasting impact.
           </p>
         </div>
       </div>

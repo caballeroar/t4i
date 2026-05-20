@@ -190,13 +190,13 @@ export function ContactForm() {
           htmlFor="contact-organization"
           className="mb-1.5 text-[#0096C8] font-semibold block text-sm"
         >
-          Organization
+          Organisation
         </label>
         <input
           id="contact-organization"
           name="organization"
           type="text"
-          placeholder="School, neighborhood organization, municipality..."
+          placeholder="School, neighborhood organisation, municipality..."
           className="w-full rounded-lg border border-border bg-[#0096C8]/10 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[#00BBF9] focus:outline-none focus:ring-2 focus:ring-[#00BBF9]/20 transition-colors"
         />
       </div>
