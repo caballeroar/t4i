@@ -148,7 +148,7 @@ export function Impact() {
           </a>
         </div>
 
-        <div className="space-y-8 text-center">
+        {/* <div className="space-y-8 text-center">
           <p className=" text-md">
             We work with partners who share a commitment to long-term community
             impact.
@@ -165,7 +165,7 @@ export function Impact() {
               />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

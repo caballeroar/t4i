@@ -1,13 +1,14 @@
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-6xl">
-        <div className="relative min-h-[100vh] sm:min-h-[600px] lg:min-h-[800px] xl:min-h-[800px]">
+        <div className="relative min-h-[100vh] sm:min-h-[600px] md:min-h-[680px] md:mt-20 lg:min-h-[800px] xl:min-h-[800px]">
           <div className="absolute left-[-28%] md:top-[-38%] md:left-[-10%] flex h-[600px] w-[600px] flex-col items-center justify-center rounded-full bg-white text-center sm:h-[700px] sm:w-[700px] md:h-[800px] md:w-[800px] lg:h-[1000px] lg:w-[1000px] xl:h-[1100px] xl:w-[1100px]">
             <div className="z-10 flex w-full max-w-4xl flex-col items-center text-start mt-30 md:mt-40">
-              <h1 className="w-full max-w-xs px-4 mt-24 font-heading -rotate-2 text-2xl font-bold leading-[0.95] tracking-[0.02em] text-primary-foreground sm:max-w-md sm:px-0 sm:text-4xl md:mt-32 md:max-w-xl md:text-5xl lg:max-w-4xl lg:text-6xl xl:text-7xl">
+              <h1 className="w-full max-w-xs px-4 mt-24 font-heading -rotate-2 text-2xl font-bold leading-[0.95] tracking-[0.02em] text-primary-foreground sm:max-w-md sm:px-0 sm:text-4xl md:mt-32 md:max-w-xl md:text-5xl lg:max-w-4xl lg:ml-[25%] lg:text-6xl xl:text-7xl">
                 <span className="text-[#F15BB5]">Global </span>
                 <span className="text-foreground">talent.</span>
                 <br />
@@ -34,6 +35,19 @@ export function Hero() {
                 </a>
               </div>
             </div>
+          </div>
+
+          <div className="absolute bottom-6 right-4 z-20 flex flex-col items-center sm:right-8  md:right-12 lg:right-16">
+            <Image
+              src="/assets/jcp_long.svg"
+              alt="Just Common People logo"
+              width={320}
+              height={80}
+              className="h-auto w-40 sm:w-40 md:w-48"
+            />
+            <p className="text-xs font-medium md:text-sm">
+              Powered by Just Common People
+            </p>
           </div>
         </div>
       </div>
