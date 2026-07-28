@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { ForWhom } from "@/components/for-whom";
 import { WhatWeDo } from "@/components/what-we-do";
+import { Highlights } from "@/components/highlights";
 import { Impact } from "@/components/impact";
 import { Partners } from "@/components/partners";
 import { WhyLaak } from "@/components/why-laak";
@@ -28,6 +29,7 @@ export default function Page() {
         />
 
         <ForWhom />
+        <Highlights />
         {/* <Partners /> */}
         <Impact />
         <About />
