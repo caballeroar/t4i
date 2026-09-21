@@ -7,12 +7,12 @@ export function Hero() {
     <section className="relative overflow-hidden py-16 sm:py-20 lg:py-28">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 bottom-0 z-0 h-[180vw] w-[180vw] max-h-[900px] max-w-[900px] -translate-x-1/2 rounded-full bg-white sm:h-[800px] sm:w-[800px] lg:h-[900px] lg:w-[900px] xl:h-[1000px] xl:w-[1000px]"
+        className="pointer-events-none absolute left-1/2 bottom-[20%] z-0 h-[180vw] w-[180vw]  -translate-x-1/2 rounded-full bg-white sm:h-[800px] sm:w-[800px] lg:h-[1000px] lg:w-[1000px] lg:bottom-[5%] lg:left-1/3 xl:h-[1200px] xl:w-[1200px]"
       />
 
       <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-1 items-center justify-items-center gap-8 pt-16 px-4 text-center lg:grid-cols-[3fr_2fr] lg:justify-items-stretch lg:gap-12 lg:text-left">
         <div className="flex flex-col items-center  lg:items-start">
-          <h1 className="font-heading -rotate-2 text-3xl font-bold leading-[0.95] tracking-[0.02em] text-primary-foreground sm:text-5xl lg:text-5xl xl:text-6xl">
+          <h1 className="font-heading -rotate-2 text-3xl font-bold leading-[0.95] tracking-[0.02em] text-primary-foreground sm:text-5xl lg:text-5xl">
             <span className="text-[#F15BB5]">Global </span>
             <span className="text-foreground">talent.</span>
             <br />
